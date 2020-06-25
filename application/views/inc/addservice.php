@@ -1,8 +1,8 @@
 <!-- Material input -->
 <form>
 <div class="md-form">
-  <input type="text" id="form1" class="form-control">
-  <label for="form1">Name</label>
+  <input type="text" id="form1" class="form-control" placeholder='name'>
+  <!--<label for="form1">Name</label>-->
 </div>
 <div class="md-form">
   <input type="text" id="form1" class="form-control">

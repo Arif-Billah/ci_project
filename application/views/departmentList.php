@@ -4,17 +4,8 @@
    <?php if(isset($sidebar)){echo $sidebar;}?>
 		</div>
 <div class='col-md-10'>
-<?php if(isset($studentadd)){echo $studentadd;}?>
+<?php if(isset($departmentList)){echo $departmentList;}?>
 </div>
 </div>
 </div>
 <?php if(isset($footer)){echo $footer;}?>
-
-<?php if($this->session->flashdata('msg'))?>
-				<?=$this->session->flashdata('msg') ?>
-
-
-
-
-
-
