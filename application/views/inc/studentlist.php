@@ -28,7 +28,18 @@
 	  <th class="th-sm"><?= $sdata->student_roll ?></th>
 	  <th class="th-sm"><?= $sdata->student_reg ?></th>
 	  <th class="th-sm"><?= $sdata->student_email ?></th>
-	  <th class="th-sm"><?= $sdata->student_dep ?></th>
+	  
+	  
+	  <th class="th-sm">
+	   <?php
+	   $id=$sdata->student_dep;
+	     $ddata=$this->Department_model->DepartmentById($id);
+		if(isset($ddata)){
+			echo $ddata->dep_name;
+		}
+		?>
+	  </th>
+	   
 	  <th class="th-sm"><a href="<?=base_url()?>student/studentDetails/<?=$sdata->sid ?>" ><i class="fas fa-edit"></i></a></th>
 	  <th class="th-sm"><a onclick="return confirm('Are you sure you want to delete this item')" href="<?=base_url()?>student/DeleteStudentById/<?=$sdata->sid ?>" ><i class="fas fa-trash-alt"></i></a></th>
     </tr>

@@ -66,4 +66,10 @@ class Department extends CI_Controller{
 			redirect ('department');
 		}
 	}
+	
+	public function DeleteDepartmentById($id){
+		$this->Department_model->DeleteDepartmentById($id);
+		redirect('department/DepartmentList');
+		
+		}
 }

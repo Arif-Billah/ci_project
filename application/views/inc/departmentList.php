@@ -24,7 +24,7 @@
 	  <th class="th-sm"><?= $sdata->dep_id ?></th>
 	  <th class="th-sm"><?= $sdata->dep_name ?></th>
 	  <th class="th-sm"><a href="<?=base_url()?>department/DepartmentDetails/<?=$sdata->dep_id?>" ><i class="fas fa-edit"></i></a></th>
-	  <th class="th-sm"><a href="<?=base_url()?>student/DeleteStudentById/<?=$sdata->dep_id ?>" ><i class="fas fa-trash-alt"></i></a></th>
+	  <th class="th-sm"><a href="<?=base_url()?>department/DeleteDepartmentById/<?=$sdata->dep_id ?>" ><i class="fas fa-trash-alt"></i></a></th>
     </tr>
    <?php } ?>
   </tbody>

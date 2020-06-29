@@ -22,10 +22,13 @@ class Department_model extends CI_Model{
 		$result=$query->row();
 		return $result;
 	}
-	public function UpdateDepartment($id,$data){
-		$this->db->set('dep_name',$data['name']);
+	
+	
+	public function DeleteDepartmentById($id){
 		$this->db->where('dep_id',$id);
-		$this->db->update("department_table");
+		$this->db->delete('department_table');
+		
+		
 	}
 	
 	

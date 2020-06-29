@@ -1,5 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Student extends CI_Controller {
 		public function __construct(){
@@ -59,6 +58,7 @@ class Student extends CI_Controller {
 		$data['title'] = "student list";
 		$data['header'] = $this->load->view('inc/header.php',$data,True);
 		$data['sidebar'] = $this->load->view('inc/sidebar.php','',True);
+		$data['alldept'] = $this->Department_model->AllDepartment();
 		$data['studentdata']=$this->student_model->ListAllstudentData();
 		$data['studentlist'] = $this->load->view('inc/studentlist.php',$data,True);
 		$data['footer'] = $this->load->view('inc/footer.php','',True);

@@ -31,22 +31,19 @@
 				</div>
 
 
-				
-				
-						
-					
-				 
-				 
 				<select class="browser-default custom-select custom-select-lg mb-3" name='dept' id='dept'>
 				  <!--<option id='abc'>select department</option>-->
 				   <?php foreach($alldept as $alldept)
 					 if($alldept->dep_id==$studentDataById->student_dep){
-						{?>
+						{?> 
 				  <option selected value="<?php echo $alldept->dep_id;?>"><?php echo $alldept->dep_name;?></option>
 					<?php }}else{?>
 				  <option  value="<?php echo $alldept->dep_id;?>"><?php echo $alldept->dep_name;?></option>
 					<?php }?>
 				  </select>
+				 
+				 
+				
 				<button type="submit" class="btn btn-blue-grey btn-lg btn primary">Submit</button>
 				
      

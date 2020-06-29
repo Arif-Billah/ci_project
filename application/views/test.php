@@ -1,4 +1,3 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <link rel="stylesheet" href="<?php echo base_url('css/style.css');?>">
  <div class="main-content mt-5 ml-3 newClass">
 			

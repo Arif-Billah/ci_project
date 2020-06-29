@@ -1,6 +1,4 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Test extends CI_Controller {
 			public function __construct(){
 			parent::__construct();
@@ -30,11 +28,11 @@ class Test extends CI_Controller {
 		
 		//$this->sesssion['msg']='ok';
 		$this->session->set_flashdata('flash_welcome', 'Hey, welcome to the site!');
-		$this->load->view('test');
+		//$this->load->view('test');
 		//redirect('test/home');
 		//$this->session->set_flashdata('msg','success');
 		//var_dump($_SESSION);
-		//redirect('test');
+		redirect('test');
         //exit;
 		//$this->session->keep_flashdata('msg','hello');
 		//$this->load->view('test'); 

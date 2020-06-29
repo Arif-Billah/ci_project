@@ -3,7 +3,7 @@
 			<hr/>
 			
         <div class="">
-             <form id="contact" action="<?= base_url() ?>department/AddDepartment" method="post" enctype ="multipart/form-data">
+             <form id="contact" action="<?= base_url() ?>author/AddAuthorform" method="post" enctype ="multipart/form-data">
            <!-- Material input -->
 				<div class="md-form">
 				  <input type="text" name='name' id="name" class="form-control" placeholder='Name'>
