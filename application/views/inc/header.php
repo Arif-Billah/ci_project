@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="<?php echo base_url();?>css/datatables.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>css/datatables-select.min.css">
 	  <link rel="stylesheet" href="<?php echo base_url();?>css/style.css">
+	  <script src="<?php echo base_url();?>js/jquery-3.4.1.min.js"></script>
+	  <script src="<?php echo base_url();?>js/datatables.min.js"></script>
+      <script src="<?php echo base_url();?>js/datatables-select.min.js"></script>
 </head>
 
 

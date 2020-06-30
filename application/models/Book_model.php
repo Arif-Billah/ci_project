@@ -37,4 +37,12 @@ class Book_model extends CI_Model{
 		
 		
 	}
-}
+	public function BookNameById($id){
+		$this->db->select('book_name');
+		$this->db->from('book_table');
+		$this->db->where('book_id',$id);
+		$query=$this->db->get();
+		$result=$query->row();
+		return $result;
+	}
+	}

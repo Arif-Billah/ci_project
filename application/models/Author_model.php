@@ -24,7 +24,7 @@ class Author_model extends CI_Model{
 		$result=$query->row();
 		return $result;
 	}
-	
+
 	public function UpdateAuthor($id,$data){
 		$this->db->set('author_name',$data['name']);
 		$this->db->where('id',$id);

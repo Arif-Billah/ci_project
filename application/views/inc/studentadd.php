@@ -23,12 +23,15 @@
 				  <label for="reg"></label>
 				</div>
 				<div class="md-form">
-				  <i class="fas fa-envelope prefix"></i>
+				 <!--<i class="fas fa-envelope prefix"></i>-->
 				  <input type="email" name='email' id="email" class="form-control" placeholder='E-mail address'>
 				  <label for="inputIconEx1"></label>
 				</div>
-
-
+				<div class="md-form">
+				  <input type="text" name='phone' id="phone" class="form-control" placeholder='Phone No'>
+				  <label for="reg"></label>
+				</div>
+				
 				<!-- Material input -->
 				
 				<select class="browser-default custom-select custom-select-lg mb-3" name='dept' id='dept'>
@@ -41,6 +44,8 @@
 				  
 					<?php } ;?>
 				</select>
+				
+				
 				<button type="submit" class="btn btn-blue-grey btn-lg btn primary">Submit</button>
 				
      
