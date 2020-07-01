@@ -9,8 +9,10 @@ class Author extends CI_Controller {
 			$data=array();
 			$this->load->model('Author_model');
 			 //$this->load->model('Department_model');
+			 if(!$this->session->userdata('user_login')){
+			redirect('user');
 		}
-
+		}
 	public function AddAuthor(){
 		 
 		$data['title'] = "Add new student";
@@ -86,5 +88,5 @@ class Author extends CI_Controller {
 		
 		}
 	
+
 }
- 

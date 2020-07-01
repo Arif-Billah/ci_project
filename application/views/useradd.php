@@ -9,15 +9,21 @@
 	 
 	 
 	 <!-- Default form login -->
-<form class="text-center border border-light p-5" action="#!">
+<form class="text-center border border-light p-5" action="<?= base_url() ?>user/AddUserForm" method="post" enctype ="multipart/form-data">
 
     <p class="h4 mb-4">Sign in</p>
-
+	<?php 
+		$message=$this->session->flashdata('msg');
+		if(isset($message)){
+			echo $message;
+		}
+	
+	?>
     <!-- Email -->
-    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+    <input type="text" id="name" name="name" class="form-control mb-4" placeholder="Name">
 
     <!-- Password -->
-    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+    <input type="password" id="pass" name="pass" class="form-control mb-4" placeholder="Password">
 
     <div class="d-flex justify-content-around">
         <div>

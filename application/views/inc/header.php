@@ -17,6 +17,11 @@
 	  <script src="<?php echo base_url();?>js/jquery-3.4.1.min.js"></script>
 	  <script src="<?php echo base_url();?>js/datatables.min.js"></script>
       <script src="<?php echo base_url();?>js/datatables-select.min.js"></script>
+      <script src="<?php echo base_url();?>js/datatables-select.min.js"></script>
+	  <script type="text/javascript" src="<?php echo base_url();?>js/popper.min.js"></script>
+	  <script type="text/javascript" src="<?php echo base_url();?>js/bootstrap.js"></script>
+     <script type="text/javascript" src="<?php echo base_url();?>js/mdb.min.js"></script>
+	 <script src="<?php echo base_url();?>js/custom.js?p=<?= time();?>"></script>
 </head>
 
 

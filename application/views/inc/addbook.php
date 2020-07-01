@@ -13,6 +13,10 @@
 				  <input type="text" name='name' id="name" class="form-control" placeholder='Book Name'>
 				  <label for="name"></label>
 				</div>
+				<div class="md-form">
+				  <input type="text" name='stk' id="stk" class="form-control" placeholder='Total Book'>
+				  <label for="Stock"></label>
+				</div>
 				<!-- Material input -->
 				
 				<select class="browser-default custom-select custom-select-lg mb-3" name='dept' id='dept'>

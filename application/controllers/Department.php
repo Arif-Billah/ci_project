@@ -7,11 +7,14 @@ class Department extends CI_Controller{
 		$this->load->library('form_validation');
 		$this->load->model('Department_model');
 		$data=array();
+		 if(!$this->session->userdata('user_login')){
+			redirect('user');
+		} 
 		
 	}
-	public function Index(){
+	 public function Index(){
 		$this->Home();
-	}
+	} 
 	public function Home(){
 		$data['header']=$this->load->view('inc/header','',true);
 		$data['sidebar']=$this->load->view('inc/sidebar','',true);

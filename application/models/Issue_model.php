@@ -40,4 +40,23 @@ class Issue_model extends CI_Model{
 		$result=$query->row();
 		return $result;
 	}
+	public function GetSingleId($id){
+		$this->db->select('issue_id');
+		$this->db->from('issue_table');
+		$this->db->where('issue_id',$id);
+		$qrequest=$this->db->get();
+		$result=$qrequest->row();
+		//print_r($result);
+		return $result;
+		
+	}
+	public function SetReturnDate($data,$id){
+		//$this->db->insert('issue_table',$data);
+		//$this->db->where('issue_id',$id);
+		
+		$this->db->set('return_back',$data['return_back']);
+		$this->db->where('issue_id',$id);
+		$this->db->update("issue_table");
+		
+	}
 }

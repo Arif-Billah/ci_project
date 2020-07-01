@@ -3,7 +3,7 @@
 			<?php if($this->session->flashdata('msg'))?>
 				<?=$this->session->flashdata('msg') ?>
 			
-            <h2>Edit Student</h2>
+            <h2>Student Details</h2>
 			<hr/>
 			<?php //print_r($studentDataByReg);?>
 			
@@ -17,10 +17,11 @@
 				  <label for="name"></label>
 				</div>
 				
-				<div class="md-form">
-				  <input type="text" name='roll' id="roll" value='<?php echo $studentDataByReg->student_roll;?>' class="form-control" placeholder='Roll No'>
+				<!--<div class="md-form">
+				  <input type="text" name='roll' id="roll" value='<?php //echo $studentDataByReg->student_roll;?>' class="form-control" placeholder='Roll No'>
 				  <label for="roll"></label>
-				</div>
+				</div>-->
+				
 				<div class="md-form">
 				  <input type="text" name='reg' id="reg" class="form-control" value='<?php echo $studentDataByReg->student_reg;?>' placeholder='Reg No'>
 				  <label for="reg"></label>
@@ -28,24 +29,34 @@
 				
 				<div class="md-form">
 				  
-				  <input type="text" name='phone' id="phone" class="form-control" value='<?php echo $studentDataByReg->phone;?>' placeholder='E-mail address'>
+				  <input type="text" name='phone' id="phone" class="form-control" value='<?php echo $studentDataByReg->phone;?>' placeholder=''>
 				  <label for="email"></label>
 				</div>
 
 
-				<select class="browser-default custom-select custom-select-lg mb-3" name='dept' id='dept'>
+				<!--<select class="browser-default custom-select custom-select-lg mb-3" name='dept' id='dept'>
 				  
 				 <option value="">
 				 <?php
-				 $id=$studentDataByReg->student_dep;
+				 /* $id=$studentDataByReg->student_dep;
 				 $ddata=$this->Department_model->DepartmentById($id);
 				 if(isset($ddata)){
 					 print_r($ddata->dep_name);
-				 }
-				 ?>
+				 }*/
+				 ?> 
 				 
 				 </option>
-				</select>
+				</select>-->
+				
+				<div class="md-form">
+				  
+				  <input type="text" name='dept' id="dept" class="form-control" value='<?php $id=$studentDataByReg->student_dep;
+				 $ddata=$this->Department_model->DepartmentById($id);
+				 if(isset($ddata)){
+					 print_r($ddata->dep_name);
+				 }?>' placeholder='department Name'>
+				  <label for="dept"></label>
+				</div>
             </form>
         </div>			
    </div> 

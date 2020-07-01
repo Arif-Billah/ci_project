@@ -18,6 +18,15 @@
 				  <input type="text" name='reg' id="reg" class="form-control" placeholder='Reg'>
 				  <label for="roll"></label>
 				</div>
+				<div class="md-form">
+				  <input type="Date" name='return' id="return" class="form-control" placeholder='Return Date'>
+				  <label for="roll"></label>
+				</div>
+				
+				<div class="md-form">
+				  <input type="text" name='status' id="status" class="form-control" placeholder='status'>
+				  <label for="status"></label>
+				</div>
 				
 				<!-- Material input -->
 				
@@ -42,10 +51,7 @@
 					<?php } ?>
 				</select>
 				
-				<div class="md-form">
-				  <input type="Date" name='return' id="return" class="form-control" placeholder='Return Date'>
-				  <label for="roll"></label>
-				</div>
+				
 				
 				<button type="submit" class="btn btn-blue-grey btn-lg btn primary">Submit</button>
 				

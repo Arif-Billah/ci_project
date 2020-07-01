@@ -10,6 +10,9 @@ class Book extends CI_Controller {
 			 $this->load->model('Department_model');
 			 $this->load->model('Author_model');
 			 $this->load->model('Book_model');
+			 if(!$this->session->userdata('user_login')){
+			redirect('user');
+		}
 		}
 
 	public function AddBook(){
@@ -29,6 +32,7 @@ class Book extends CI_Controller {
 	
 	public function AddBookform(){
 		$this->form_validation->set_rules('name','name','required');
+		$this->form_validation->set_rules('stk','stk','required');
  		 
 		$this->form_validation->set_rules('dept','dept','required');
 		$this->form_validation->set_rules('aname','aname','required');
@@ -44,6 +48,7 @@ class Book extends CI_Controller {
 		}else{
 			//print_r($_POST);
 			 $data['book_name'] = $this->input->post('name');
+			 $data['stock'] = $this->input->post('stk');
 			$data['department']  = $this->input->post('dept');
 			$data['author']  = $this->input->post('aname');
 		

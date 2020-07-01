@@ -11,7 +11,11 @@ class Issue extends CI_Controller {
 			 $this->load->model('Book_model');
 			 $this->load->model('Issue_model');
 			 $this->load->model('Author_model');
+			 if(!$this->session->userdata('user_login')){
+			redirect('user');
 		}
+		}
+		
 
 	public function AddIssue(){
 		 
@@ -34,6 +38,7 @@ class Issue extends CI_Controller {
 		$this->form_validation->set_rules('reg','reg','required');
 		$this->form_validation->set_rules('dept','dept','required');
 		$this->form_validation->set_rules('return','return','required');
+		$this->form_validation->set_rules('status','return','required');
 		if($this->form_validation->run()==false){
 			/*$this->session->set_flashdata('msg', '<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert">&times;</a>'.validation_errors().'</div>'); */
 			//$this->load->view('front/index');
@@ -49,6 +54,7 @@ class Issue extends CI_Controller {
 			$data['dep']  = $this->input->post('dept');
 			$data['reg']  = $this->input->post('reg');
 			$data['book']  = $this->input->post('book');
+			$data['status']  = $this->input->post('status');
 			$data['return_date']  = $this->input->post('return');
 			$this->Issue_model->SaveIssue($data);
 			$this->session->set_flashdata('msg',"Successfully Added"); 

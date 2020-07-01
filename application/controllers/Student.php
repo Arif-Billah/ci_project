@@ -8,7 +8,11 @@ class Student extends CI_Controller {
 			$data=array();
 			$this->load->model('student_model');
 			 $this->load->model('Department_model');
+			 if(!$this->session->userdata('user_login')){
+			redirect('user');
 		}
+		}
+		
 
 	public function Addstudent(){
 		 
